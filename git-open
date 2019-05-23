@@ -17,7 +17,8 @@ function open_url()
 {
   case $MACHTYPE in
     *apple*) local _open='open';;
-    *linux*) local _open='xdg-open'
+    *linux*) local _open='xdg-open';;
+    *cygwin*) local _open='xdg-open'
   esac
   echo "Running: $_open $1"
   $_open $1 &> /dev/null
